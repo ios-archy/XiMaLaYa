@@ -1,0 +1,6 @@
+framework module Pods_XiMaLaYaFM {
+  umbrella header "Pods-XiMaLaYaFM-umbrella.h"
+
+  export *
+  module * { export * }
+}
