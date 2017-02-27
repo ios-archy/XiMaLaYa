@@ -7,7 +7,10 @@
 //
 
 #import "AppDelegate.h"
-
+#import "XMLYTabBarController.h"
+#import "XMLYTabBar.h"
+#import "Test1ViewController.h"
+#import "Test2ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +19,36 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+   
+    XMLYTabBarController *rootVc =[XMLYTabBarController tabBarControllerWithAddChildVCsBlock:^(XMLYTabBarController *tabBarVC) {
+       
+      [tabBarVC addChildVC:[Test1ViewController new] normalImageName:@"tabbar_find_n" selectedImageName:@"tabbar_find_h" isRequiredNavController:YES];
+    
+      [tabBarVC addChildVC:[Test2ViewController new] normalImageName:@"tabbar_sound_n" selectedImageName:@"tabbar_sound_h" isRequiredNavController:YES];
+    
+      [tabBarVC addChildVC:[Test1ViewController new] normalImageName:@"tabbar_download_n" selectedImageName:@"tabbar_download_h" isRequiredNavController:YES];
+    
+      [tabBarVC addChildVC:[Test2ViewController new] normalImageName:@"tabbar_me_n" selectedImageName:@"tabbar_me_h" isRequiredNavController:YES];
+        
+    }];
+    
+    XMLYTabBar *tabbar = (XMLYTabBar *)rootVc.tabBar;
+    tabbar.MiddleClickBlock = ^(BOOL isPlaying)
+    {
+        if (isPlaying) {
+            
+        }
+        else
+        {
+            
+        }
+    };
+    
+    self.window.rootViewController = rootVc;
+    [self.window makeKeyAndVisible];
+    
+    
+    
     return YES;
 }
 

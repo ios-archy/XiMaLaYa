@@ -11,6 +11,13 @@
 
 @interface XMLYMiddleView ()
 
+
+@property (nonatomic,strong)UIImageView *NP_shadow;
+
+@property (nonatomic,strong)UIImageView *NP_normal;
+
+@property (nonatomic,strong)UIImageView *NP_Playshadow;
+
 ///中间的播放内容视图
 @property (nonatomic,strong)UIImageView *MiddelImageView;
 
@@ -53,20 +60,58 @@ static XMLYMiddleView *_shareInstance;
 {
     if (!_PlayBtn) {
         _PlayBtn =[[UIButton alloc]initWithFrame:self.frame];
+        [_PlayBtn setImage:[UIImage imageNamed:@"tabbar_np_play"] forState:UIControlStateNormal];
     }
     return _PlayBtn;
 }
+-(UIImageView *)NP_shadow
+{
+    if (!_NP_shadow) {
+        _NP_shadow =[[UIImageView alloc]initWithFrame:self.frame];
+        _NP_shadow.layer.cornerRadius = self.frame.size.width / 2;
+        _NP_shadow.image =[UIImage imageNamed:@"tabbar_np_shadow"];
+    }
+    return _NP_shadow;
+}
+
+-(UIImageView *)NP_normal
+{
+    if (!_NP_normal) {
+        _NP_normal =[[UIImageView alloc]initWithFrame:self.frame];
+        _NP_normal.layer.cornerRadius = self.frame.size.width / 2;
+        _NP_normal.image =[UIImage imageNamed:@"tabbar_np_normal"];
+    }
+    return _NP_normal;
+}
+
+-(UIImageView *)NP_Playshadow
+{
+    if (!_NP_Playshadow) {
+        _NP_Playshadow =[[UIImageView alloc]initWithFrame:self.frame];
+        _NP_Playshadow.layer.cornerRadius = self.frame.size.width / 2;
+        _NP_Playshadow.image =[UIImage imageNamed:@"tabbar_np_playshadow"];
+    }
+    return _NP_Playshadow;
+}
+
 
 -(UIImageView *)MiddelImageView
 {
     if (!_MiddelImageView) {
-        _MiddelImageView =[[UIImageView alloc]initWithFrame:self.frame];
+        CGRect frame = self.bounds;
+        frame.size = CGSizeMake(43, 43);
+        _MiddelImageView =[[UIImageView alloc]init];
+        _MiddelImageView.center = self.center;
+        _MiddelImageView.bounds = frame;
         _MiddelImageView.layer.cornerRadius = self.frame.size.width / 2;
     }
     return _MiddelImageView;
 }
 -(void)addContent
 {
+    [self addSubview:self.NP_shadow];
+    [self addSubview:self.NP_normal];
+    [self addSubview:self.NP_Playshadow];
     [self addSubview:self.MiddelImageView];
     [self addSubview:self.PlayBtn];
     
@@ -156,7 +201,11 @@ static XMLYMiddleView *_shareInstance;
 }
 
 
-
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+    self.MiddelImageView.layer.cornerRadius = self.MiddelImageView.frame.size.width/2;
+}
 
 -(void)dealloc
 {

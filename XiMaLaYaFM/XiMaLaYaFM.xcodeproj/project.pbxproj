@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		283696B31E642CEA000E8BE6 /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 283696B21E642CEA000E8BE6 /* Test1ViewController.m */; };
+		283696B61E642CF7000E8BE6 /* Test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 283696B51E642CF7000E8BE6 /* Test2ViewController.m */; };
 		28746F581E5D42AB00CACC37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28746F561E5D42AB00CACC37 /* Main.storyboard */; };
 		28746F5A1E5D42AB00CACC37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28746F591E5D42AB00CACC37 /* Assets.xcassets */; };
 		28746F701E5D60E500CACC37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28746F6D1E5D60E500CACC37 /* AppDelegate.m */; };
@@ -24,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		283696B11E642CEA000E8BE6 /* Test1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test1ViewController.h; sourceTree = "<group>"; };
+		283696B21E642CEA000E8BE6 /* Test1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test1ViewController.m; sourceTree = "<group>"; };
+		283696B41E642CF7000E8BE6 /* Test2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test2ViewController.h; sourceTree = "<group>"; };
+		283696B51E642CF7000E8BE6 /* Test2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test2ViewController.m; sourceTree = "<group>"; };
 		28746F4A1E5D42AB00CACC37 /* XiMaLaYaFM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XiMaLaYaFM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28746F571E5D42AB00CACC37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28746F591E5D42AB00CACC37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,6 +102,10 @@
 			children = (
 				28746F561E5D42AB00CACC37 /* Main.storyboard */,
 				28746F591E5D42AB00CACC37 /* Assets.xcassets */,
+				283696B11E642CEA000E8BE6 /* Test1ViewController.h */,
+				283696B21E642CEA000E8BE6 /* Test1ViewController.m */,
+				283696B41E642CF7000E8BE6 /* Test2ViewController.h */,
+				283696B51E642CF7000E8BE6 /* Test2ViewController.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -326,11 +336,13 @@
 				28746F901E5D6AFA00CACC37 /* XMLYNavgationViewController.m in Sources */,
 				28746F811E5D63AA00CACC37 /* XMLYTabBarController.m in Sources */,
 				28746F7B1E5D626500CACC37 /* XMLYTabBar.m in Sources */,
+				283696B31E642CEA000E8BE6 /* Test1ViewController.m in Sources */,
 				28746F8D1E5D67AB00CACC37 /* UIView+XMLYLayout.m in Sources */,
 				28746F871E5D675F00CACC37 /* CALayer+PauseAnimate.m in Sources */,
 				28746F7E1E5D638300CACC37 /* XMLYMiddleView.m in Sources */,
 				28746F701E5D60E500CACC37 /* AppDelegate.m in Sources */,
 				28746F721E5D60E500CACC37 /* main.m in Sources */,
+				283696B61E642CF7000E8BE6 /* Test2ViewController.m in Sources */,
 				28746F8A1E5D679500CACC37 /* UIImage+XMLYImage.m in Sources */,
 				28746F781E5D623500CACC37 /* XMLYNavBar.m in Sources */,
 			);

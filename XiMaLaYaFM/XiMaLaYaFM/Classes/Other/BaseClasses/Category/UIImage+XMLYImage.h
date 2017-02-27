@@ -10,4 +10,8 @@
 
 @interface UIImage (XMLYImage)
 
++(UIImage *)originImageWithNames:(NSString *)name;
+
+-(UIImage *)circleImage;
+
 @end

@@ -10,4 +10,13 @@
 
 @interface XMLYTabBarController : UITabBarController
 
+
+
++(instancetype)shareInstance;
+
+
++(instancetype)tabBarControllerWithAddChildVCsBlock:(void(^)(XMLYTabBarController *tabBarVC))addVCBlock;
+
+
+-(void)addChildVC:(UIViewController *)VC normalImageName:(NSString *)normalImageName selectedImageName:(NSString *)selecteImageName isRequiredNavController:(BOOL)isRequired;
 @end

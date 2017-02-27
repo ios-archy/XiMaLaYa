@@ -10,4 +10,10 @@
 
 @interface XMLYTabBar : UITabBar
 
+
+///点击中间按钮执行block回调
+
+@property (nonatomic,copy) void (^MiddleClickBlock)(BOOL isPlaying);
+
+
 @end
